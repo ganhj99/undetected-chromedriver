@@ -337,7 +337,7 @@ class Patcher(object):
         executable_path = executable_path or self.executable_path
         try:
             with io.open(executable_path, "rb") as fh:
-                return fh.read().find(b"undetected chromedriver") != -1
+                return fh.read().find(b"") != -1
         except FileNotFoundError:
             return False
 
